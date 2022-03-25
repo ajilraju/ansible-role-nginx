@@ -21,8 +21,8 @@
   changed_when: true
   notify: Restart Nginx
 
-- name: Copying index.html file.
+- name: Copying index.html file
   ansible.builtin.template:
     src: index.html.j2
-    dest: "{{doc_root}}/index.html"
+    dest: "{{ doc_root }}/index.html"
     mode: 0644
